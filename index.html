@@ -11,6 +11,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+/* Make PNG/SVG transparency visible */
+.carousel .reel article .image.featured img {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+/* Remove template padding behind images */
+.carousel .reel article .image.featured {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Remove background and shadows from <article> wrapper */
+.carousel .reel article {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+</style>
+
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -21,40 +42,33 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Helios</a></h1>
+								<img src="images/header.png" alt="" />
+								<img>
 								<hr />
-								<p>Another fine freebie by HTML5 UP</p>
+								<p>Empresa líder en soluciones BPO, especializada en atención al cliente tanto a nivel nacional como internacional. </p>
 							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html">Inicio</a></li>
 								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+   							 <a href="#">Productos o Servicios</a>
+								<ul>
+									<li><a href="#">Envíos Masivos</a></li>
+									<li><a href="#">Fidelización de Clientes</a></li>
+									<li><a href="#">Help Desk</a></li>
+									<li><a href="#">Gestión de Cobranzas</a></li>
+									<li><a href="#">Televenta / Telemercadeo</a></li>
+									<li><a href="#">Contact Center</a></li>
+									<li><a href="#">Desarrollo de Software</a></li>
+								</ul>
+							</li>
+
+								<li><a href="left-sidebar.html">Mision/Vision</a></li>
+								<li><a href="right-sidebar.html">Acerca de Nuestra Empresa</a></li>
+								<li><a href="no-sidebar.html">Contactenos</a></li>
 							</ul>
 						</nav>
 
@@ -63,126 +77,48 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Hi. You're looking at <strong>Helios</strong>.</h2>
-						<p>
-							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
-							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
-						</p>
+						<h2>Nuestros Clientes</h2>
 					</header>
 				</section>
 
 			<!-- Carousel -->
 				<section class="carousel">
-					<div class="reel">
+    <div class="reel">
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+        <article>
+            <a class="image featured"><img src="images/ambacarlogo.png" alt="" /></a>
+        </article>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+        <article>
+            <a class="image featured"><img src="images/graphic7.jpg" alt="" /></a>
+        </article>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+        <article>
+            <a class="image featured"><img src="images/grupo_roldan.png" alt="" /></a>
+        </article>
+		<article style="margin-top: +100px;">
+			<a class="image featured">
+				<img src="images/normedia.jpg" alt="" />
+			</a>
+		</article>
+    </div>
+</section>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-					</div>
-				</section>
 
 			<!-- Main -->
 				<div class="wrapper style2">
 
 					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 						<header>
-							<h2><a href="#">Sed massa imperdiet magnis</a></h2>
+							<h2><a href="#">Quienes Somos</a></h2>
 							<p>
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
+								Transformamos la experiencia del cliente con tecnología y talento humano
 							</p>
 						</header>
 						<p>
-							Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-							posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-							sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-							mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-							lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-							consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-							interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-							natoque aenean scelerisque.
+							Desde nuestro centro de contacto, diseñamos, automatizamos y sistematizamos cada proceso para optimizar todos los puntos de contacto y crear experiencias excepcionales. Integramos tecnologías avanzadas como chatbots e inteligencia artificial para ofrecer soluciones ágiles, personalizadas y escalables que se adaptan con rapidez a las demandas del mercado. Nuestro principal diferenciador es el talento humano: invertimos en la formación continua de nuestro equipo para garantizar un servicio eficiente, actualizado y alineado con las últimas tendencias del sector. Guiados por altos estándares de calidad e innovación constante, construimos relaciones sólidas y duraderas con nuestros aliados estratégicos, convirtiéndonos en el socio de confianza que impulsa el crecimiento de tu negocio.
 						</p>
-						<footer>
-							<a href="#" class="button">Continue Reading</a>
-						</footer>
+					
 					</article>
 
 				</div>
@@ -192,38 +128,35 @@
 
 					<section id="features" class="container special">
 						<header>
-							<h2>Morbi ullamcorper et varius leo lacus</h2>
-							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
+							<h2>Productos y Servicios</h2>
+							<p></p>
 						</header>
 						<div class="row">
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="images/desarrollo_software.png" alt="" /></a>
 								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
+									<h3><a href="#">Desarrollo de Software</a></h3>
 								</header>
 								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									En TELEWORK no solo escribimos código, creamos soluciones que transforman negocios. Desarrollamos aplicaciones web y móviles, sistemas empresariales e integraciones de inteligencia artificial escalables, seguras y diseñadas para impulsar el crecimiento. Nuestro equipo de desarrolladores expertos trabaja con metodologías ágiles y las últimas tecnologías del mercado, garantizando entregas rápidas sin comprometer la calidad. Cada proyecto es una oportunidad para superar expectativas, optimizar procesos y generar valor tangible. En TELEWORK convertimos tus ideas en experiencias digitales extraordinarias que marcan la diferencia.
+								</p>	
+								</article>
+							<article class="col-4 col-12-mobile special">
+								<a href="#" class="image featured"><img src="images/call_center.png" alt="" /></a>
+								<header>
+									<h3><a href="#">Help Desk</a></h3>
+								</header>
+								<p>
+									Nuestro servicio de Help Desk garantiza la continuidad operativa de tu negocio con soporte técnico especializado 24/7. Ofrecemos atención multicanal que combina rapidez, eficiencia y trato humano excepcional: desde soporte remoto y gestión de tickets hasta monitoreo proactivo y mantenimiento preventivo. Trabajamos con metodologías ITIL y herramientas de vanguardia para resolver cada incidencia con precisión, minimizando tiempos de respuesta y maximizando la satisfacción de tus usuarios. En TELEWORK no solo solucionamos problemas técnicos, construimos tranquilidad para que tu equipo se enfoque en lo importante mientras mantenemos tu infraestructura tecnológica funcionando sin interrupciones.
 								</p>
 							</article>
 							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+								<a href="#" class="image featured"><img src="images/cliente_fantasma.png" alt="" /></a>
 								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
+									<h3><a href="#">Cliente Fantasma</a></h3>
 								</header>
 								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									Nuestro servicio de Cliente Fantasma es una herramienta estratégica de investigación y evaluación que revela la verdadera calidad de tu servicio. Evaluadores anónimos capacitados se hacen pasar por clientes reales para medir cada punto de contacto: realizan visitas de observación con cámara oculta, interactúan directamente con asesores comerciales y ejecutan llamadas telefónicas estratégicas. Cada experiencia es grabada y analizada según parámetros personalizados, generando informes detallados que identifican fortalezas y oportunidades de mejora. 
 								</p>
 							</article>
 						</div>
@@ -231,129 +164,55 @@
 
 				</div>
 
+					<div class="wrapper style1">
+
+						<section id="features" class="container special">
+	<header>
+		<h2>Nuestras tecnologías</h2>
+		<p>Trabajamos con las herramientas más avanzadas del mercado</p>
+	</header>
+	<div class="row">
+		<article class="col-4 col-12-mobile special">
+			<a href="#" class="image featured"><img src="images/node.png" alt="Node.js" /></a>
+		</article>
+		<article class="col-4 col-12-mobile special">
+			<a href="#" class="image featured"><img src="images/n8n.png" alt="n8n" /></a>
+		</article>
+		<article class="col-4 col-12-mobile special">
+			<a href="#" class="image featured"><img src="images/mcp.svg" alt="MCP Server" /></a>
+		</article>
+	</div>
+	<div class="row">
+		<article class="col-4 col-12-mobile special">
+			<a href="#" class="image featured"><img src="images/MySQL-Logo.wine.svg" alt="MySQL" /></a>
+		</article>
+		<article class="col-4 col-12-mobile special" style="margin-top: +100px;">
+			<a href="#" class="image featured"><img src="images/python.png" alt="Python" /></a>
+		</article>
+		<article class="col-4 col-12-mobile special">
+			<a href="#" class="image featured"><img src="images/ai.avif" alt="Inteligencia Artificial" /></a>
+		</article>
+	</div>
+</section>
+
+				</div>
+
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
-						<div class="row">
-
-							<!-- Tweets -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-												<span class="timestamp">5 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Hendrerit rutrum quisque.
-												<span class="timestamp">30 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-												<span class="timestamp">5 hours ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Posts -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Feugiat lorem ipsum</a></h3>
-												</header>
-												<span class="timestamp">2 days ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
-
-							<!-- Photos -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
-									</header>
-									<div class="row gtr-25">
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-										</div>
-									</div>
-								</section>
-
-						</div>
-						<hr />
+						
 						<div class="row">
 							<div class="col-12">
 
 								<!-- Contact -->
 									<section class="contact">
 										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
+											<h3>Nuestras Redes</h3>
 										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+										<p></p>
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.facebook.com/people/Telework/61581208329011/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 										</ul>
 									</section>
@@ -361,7 +220,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											
 										</ul>
 									</div>
 
@@ -382,6 +241,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+	
 	</body>
 </html>
