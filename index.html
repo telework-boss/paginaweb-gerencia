@@ -78,27 +78,39 @@ https://templatemo.com/tm-562-space-dynamic
   </header>
   <!-- ***** Header Area End ***** -->
 
-<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-          
-             <h2>Transformamos la <em>experiencia del cliente</em> con <span>tecnología</span> y talento humano</h2>
+</head>
+
+<style>
+@media (max-width: 767px) {
+  #imagen_1 {
+    display: none;
+  }
+}
+
+
+</style>
+
+<body>
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text">
+                <h2>Transformamos la <em>experiencia del cliente</em> con <span>tecnología</span> y talento humano</h2>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-              <img src="assets/images/header.png" alt="team meeting" style="width: 400px; margin-left: 200px;">
+            <div class="col-lg-6">
+              <div class="right-image">
+                <img src="assets/images/telworkcuadrado.png" alt="team meeting">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   <h2 style="text-align: center;">Nuestros Servicios Estrella</h2>
   <div id="about" class="about-us section">
@@ -106,7 +118,7 @@ https://templatemo.com/tm-562-space-dynamic
       <div class="row">
         <div class="col-lg-4">
           <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <img src="assets/images/servicio.png" alt="person graphic">
+            <img id="imagen_1" src="assets/images/servicio.png" alt="person graphic">
           </div>
         </div>
         <div class="col-lg-8 align-self-center">
@@ -160,7 +172,7 @@ https://templatemo.com/tm-562-space-dynamic
           </div>
         </div>
       </div>
-        <div style="text-align: right; margin-top: 20px;">
+        <div id="boton_1" style="text-align: right;">
       <a href="extra" 
         style="background: #f05f3b; padding: 12px 22px; color: white; border-radius: 8px; text-decoration: none;">
         Conoce mas de Nuestros Servicios
@@ -482,23 +494,14 @@ https://templatemo.com/tm-562-space-dynamic
                   <a href="#"><h4>Mision</h4></a>
                   <p>Ser el aliado estratégico de nuestros clientes, brindando soluciones BPO y tecnológicas de excelencia que optimizan la experiencia del usuario y generan valor real. A través de la innovación constante, la integración de tecnología avanzada y el desarrollo de nuestro talento humano, transformamos cada punto de contacto en una oportunidad para fortalecer relaciones, mejorar procesos y contribuir al crecimiento sostenible de las organizaciones que confían en nosotros</p>
                 </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/mision.jpg" alt=""></a>
-                  &nbsp;
-                  <a href="#"><img src="assets/images/visot.jpeg" alt=""></a>
-                </div>
+               
               </li>
               <li>
                 <div class="left-content align-self-center">
                   <a href="#"><h4>Vision</h4></a>
                   <p>Consolidarnos como la empresa líder en soluciones BPO y desarrollo tecnológico en la región, reconocida por nuestra excelencia operativa, innovación disruptiva y compromiso inquebrantable con la satisfacción del cliente. Aspiramos a ser referentes en la transformación digital de la atención al cliente, estableciendo nuevos estándares de calidad en el sector y expandiendo nuestro alcance internacional, mientras mantenemos nuestros valores de mejora continua, formación de talento y construcción de relaciones duraderas</p>
                 </div>
-                <div class="right-image">
-                  <a href="#"><img src="assets/images/vision.webp" alt=""></a>
-                   &nbsp;
-                   &nbsp;
-                  <a href="#"><img src="assets/images/vision2.png" alt=""></a>
-                </div>
+              
               </li>
            
             </ul>
@@ -516,7 +519,9 @@ https://templatemo.com/tm-562-space-dynamic
           <h2>Envíanos un mensaje sobre las necesidades de tu empresa</h2>
           <p>En TELEWORK estamos comprometidos con ofrecer soluciones personalizadas que se adapten a las necesidades específicas de tu empresa. Nuestro equipo está listo para escucharte y diseñar la estrategia perfecta para tu negocio.</p>
           <div class="phone-info">
-            <h4>Para cualquier consulta, llámanos: <span><i class="fa fa-phone"></i> <a href="tel:+593995493863">099 549 3863</a></span></h4>
+            <h4>Para cualquier consulta, llámanos:</h4>
+            &nbsp;
+            <h4><span><i class="fa fa-phone"></i> </span><a>099 549 3863</a></h4>
           </div>
         </div>
       </div>
