@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>TELEWORK - Productos y Servicios</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        
+        /* Header Styles - matching index.html exactly */
+        .header-area {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-area.header-sticky {
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-item {
+            list-style: none;
+            margin-left: -100px;
+            padding: 0;
+            margin-top: -5px;
+        }
+        
+        .logo img {
+            width: 200px;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav li {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .nav a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover,
+        .nav a.active {
+            color: #f05f3b;
+        }
+        
+        .main-red-button {
+            padding-left: 20px;
+        }
+        
+        .main-red-button a {
+            background: linear-gradient(105deg, #f05f3b 0%, #ff3d3d 100%);
+            padding: 12px 30px;
+            border-radius: 23px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .main-red-button a:hover {
+            opacity: 0.9;
+        }
+        
+        .menu-trigger {
+            display: none;
+            color: #2a2a2a;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Services Section */
+        .services-section {
+            background: #fff;
+            padding: 80px 0;
+            color: #333;
+        }
+        
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f05f3b 0%, #ff6b4a 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(240, 95, 59, 0.3);
+        }
+        
+        .service-card h3 {
+            color: #f05f3b;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .benefits-box {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .benefits-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .benefits-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .benefits-box ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .benefits-box ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #f05f3b 0%, #e94e32 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background: #fff;
+            color: #f05f3b;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            color: #f05f3b;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2a2a2a;
+            padding: 50px 0 30px;
+            color: #fff;
+        }
+        
+        footer h4 {
+            color: #f05f3b;
+            margin-bottom: 20px;
+        }
+        
+        footer p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+        
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            background: #f05f3b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section p {
+                font-size: 1rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .menu-trigger {
+                display: block;
+                cursor: pointer;
+            }
+            
+            .logo-item {
+                margin-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <li class="logo-item" style="margin-left: -100px; padding:0; margin-top: -5px;">
+                                <img src="assets/images/logo_tele.png" style="width: 200px;" alt="">
+                            </li>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html#top">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="index.html#about" class="active">Productos y Servicios</a></li>
+                            <li class="scroll-to-section"><a href="index.html#services">Acerca de Nuestra Empresa</a></li>
+                            <li class="scroll-to-section">
+                                <div class="main-red-button"><a href="index.html#contact">Contáctenos</a></div>
+                            </li>
+                        </ul>
+                        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Nuestros Productos y Servicios</h1>
+            <p>Soluciones integrales para transformar la experiencia de tus clientes y potenciar tu negocio</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <!-- Desarrollo de Software -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Desarrollo de Software</h3>
+                <p>En TELEWORK no solo escribimos código, creamos soluciones que transforman negocios. Desarrollamos software a medida que se adapta perfectamente a las necesidades específicas de tu empresa, utilizando las tecnologías más avanzadas y las mejores prácticas de la industria.</p>
+                
+                <ul class="features-list">
+                    <li>Aplicaciones web personalizadas y escalables</li>
+                    <li>Sistemas de gestión empresarial (ERP/CRM)</li>
+                    <li>Aplicaciones móviles nativas y multiplataforma</li>
+                    <li>Integración de APIs y servicios de terceros</li>
+                    <li>Migración y modernización de sistemas legacy</li>
+                    <li>Arquitecturas cloud y microservicios</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Soluciones 100% personalizadas a tus necesidades</li>
+                        <li>Tecnología de punta con múltiples lenguajes y frameworks</li>
+                        <li>Soporte técnico continuo y mantenimiento garantizado</li>
+                        <li>Metodologías ágiles para entrega rápida y eficiente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Chat Bot -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Chat Bot Inteligente</h3>
+                <p>Automatiza la atención al cliente con conversaciones inteligentes impulsadas por IA. Nuestros chatbots están diseñados para entender, aprender y responder de manera natural, brindando soporte 24/7 y mejorando la experiencia del usuario.</p>
+                
+                <ul class="features-list">
+                    <li>Atención automatizada 24/7 sin interrupciones</li>
+                    <li>Procesamiento de lenguaje natural (NLP) avanzado</li>
+                    <li>Integración con WhatsApp, Facebook, Web y más</li>
+                    <li>Respuestas personalizadas basadas en contexto</li>
+                    <li>Análisis de sentimientos y emociones del cliente</li>
+                    <li>Escalamiento automático a agentes humanos cuando sea necesario</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Reducción de hasta 70% en costos de atención al cliente</li>
+                        <li>Respuesta instantánea a consultas frecuentes</li>
+                        <li>Mejora en la satisfacción del cliente</li>
+                        <li>Captura y calificación automática de leads</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Gestión de Cobranzas -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Gestión de Cobranzas</h3>
+                <p>Optimizamos la recuperación de cartera mediante procesos eficientes, personal altamente capacitado y tecnología especializada. Mejoramos tu flujo de caja mientras mantenemos excelentes relaciones con tus clientes.</p>
+                
+                <ul class="features-list">
+                    <li>Estrategias de cobranza preventiva y correctiva</li>
+                    <li>Personal especializado y certificado en negociación</li>
+                    <li>Sistemas automatizados de seguimiento y recordatorios</li>
+                    <li>Reportes detallados y métricas en tiempo real</li>
+                    <li>Gestión multicanal: llamadas, SMS, WhatsApp, email</li>
+                    <li>Cumplimiento estricto de normativas y regulaciones</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Incremento significativo en la tasa de recuperación</li>
+                        <li>Reducción de cartera vencida</li>
+                        <li>Preservación de la relación con el cliente</li>
+                        <li>Transparencia total con reportería detallada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cliente Fantasma -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>Cliente Fantasma (Mystery Shopping)</h3>
+                <p>Nuestro servicio de Cliente Fantasma es una herramienta estratégica de investigación que te permite evaluar objetivamente la calidad de atención, procesos operativos y cumplimiento de estándares en tu organización.</p>
+                
+                <ul class="features-list">
+                    <li>Evaluaciones presenciales, telefónicas y digitales</li>
+                    <li>Auditorías de experiencia del cliente completas</li>
+                    <li>Evaluadores profesionales capacitados por industria</li>
+                    <li>Informes detallados con análisis cuantitativo y cualitativo</li>
+                    <li>Grabaciones de audio/video cuando sea aplicable</li>
+                    <li>Recomendaciones accionables para mejora continua</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Identificación de áreas de mejora en tiempo real</li>
+                        <li>Evaluación objetiva del cumplimiento de protocolos</li>
+                        <li>Mejora continua de la experiencia del cliente</li>
+                        <li>Benchmarking contra competencia y mejores prácticas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Center -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Contact Center Omnicanal</h3>
+                <p>Brindamos soluciones completas de contact center con atención omnicanal, combinando tecnología avanzada con agentes altamente capacitados para ofrecer experiencias excepcionales a tus clientes.</p>
+                
+                <ul class="features-list">
+                    <li>Atención multicanal: voz, chat, email, redes sociales</li>
+                    <li>Gestión de llamadas entrantes y salientes</li>
+                    <li>IVR inteligente y enrutamiento avanzado</li>
+                    <li>Grabación y monitoreo de calidad</li>
+                    <li>CRM integrado para gestión de clientes</li>
+                    <li>Reportería en tiempo real y analytics avanzado</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Mejora en la satisfacción del cliente (CSAT)</li>
+                        <li>Reducción en tiempos de espera y atención</li>
+                        <li>Escalabilidad según demanda</li>
+                        <li>Ahorro de hasta 50% vs. operación interna</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Televenta -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-phone-volume"></i>
+                </div>
+                <h3>Televenta y Telemercadeo</h3>
+                <p>Impulsamos tus ventas con estrategias efectivas de televenta y telemercadeo. Nuestro equipo especializado se convierte en una extensión de tu fuerza de ventas, generando oportunidades y cerrando negocios.</p>
+                
+                <ul class="features-list">
+                    <li>Generación y calificación de leads</li>
+                    <li>Ventas telefónicas y cierre de negocios</li>
+                    <li>Up-selling y cross-selling</li>
+                    <li>Agendamiento de citas comerciales</li>
+                    <li>Encuestas de satisfacción y estudios de mercado</li>
+                    <li>Reactivación de clientes inactivos</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Incremento en ventas y conversiones</li>
+                        <li>Optimización del embudo de ventas</li>
+                        <li>Mayor productividad de tu equipo comercial</li>
+                        <li>Métricas claras de ROI y desempeño</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Help Desk -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-life-ring"></i>
+                </div>
+                <h3>Help Desk y Soporte Técnico</h3>
+                <p>Ofrecemos servicios de help desk profesional para resolver incidencias técnicas de manera rápida y efectiva, garantizando la continuidad operativa de tu negocio.</p>
+                
+                <ul class="features-list">
+                    <li>Soporte técnico multicanal 24/7</li>
+                    <li>Sistema de tickets y gestión de incidencias</li>
+                    <li>Niveles de escalamiento definidos</li>
+                    <li>Base de conocimiento y FAQs</li>
+                    <li>Soporte remoto y asistencia en sitio</li>
+                    <li>SLAs personalizados según criticidad</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Resolución rápida de incidencias técnicas</li>
+                        <li>Reducción de downtime operativo</li>
+                        <li>Mejora en productividad de usuarios finales</li>
+                        <li>Documentación completa de casos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Fidelización -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Fidelización de Clientes</h3>
+                <p>Diseñamos e implementamos estrategias integrales de fidelización que convierten clientes ocasionales en embajadores de tu marca, incrementando el valor de vida del cliente.</p>
+                
+                <ul class="features-list">
+                    <li>Programas de lealtad personalizados</li>
+                    <li>Campañas de retención proactivas</li>
+                    <li>Segmentación avanzada de clientes</li>
+                    <li>Comunicaciones personalizadas multicanal</li>
+                    <li>Análisis de churn y prevención de fugas</li>
+                    <li>Medición de NPS y satisfacción continua</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Aumento en retención de clientes</li>
+                        <li>Incremento en lifetime value (LTV)</li>
+                        <li>Reducción de costos de adquisición</li>
+                        <li>Mejora en reputación y recomendaciones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Envíos Masivos -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h3>Envíos Masivos</h3>
+                <p>Implementamos campañas de comunicación masiva efectivas a través de múltiples canales, llegando a tu audiencia en el momento preciso con el mensaje correcto.</p>
+                
+                <ul class="features-list">
+                    <li>SMS masivos con alta tasa de entrega</li>
+                    <li>Email marketing con diseños profesionales</li>
+                    <li>Mensajes masivos por WhatsApp Business</li>
+                    <li>Notificaciones push móviles</li>
+                    <li>Segmentación y personalización avanzada</li>
+                    <li>Reportes de entrega, apertura y conversión</li>
+                </ul>
+                
+                <div class="benefits-box">
+                    <h4>Beneficios Clave:</h4>
+                    <ul>
+                        <li>Alcance masivo con inversión optimizada</li>
+                        <li>Comunicación inmediata y efectiva</li>
+                        <li>Automatización de campañas recurrentes</li>
+                        <li>Métricas claras de engagement y ROI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Contáctanos hoy y descubre cómo nuestras soluciones pueden impulsar tu empresa</p>
+            <a href="index.html#contact" class="cta-button">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Contacto</h4>
+                    <p>
+                        <i class="fa fa-map-marker"></i> Sabanilla Oe 3-169<br />
+                        y Av. Real Audiencia<br />
+                        Quito - Ecuador
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Teléfonos</h4>
+                    <p>
+                        <i class="fa fa-phone"></i> 099 549 3863<br />
+                        <i class="fa fa-phone"></i> 096 186 7000<br />
+                        Lun - Vie: 8:00 AM - 6:00 PM
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Email</h4>
+                    <p>
+                        <i class="fa fa-envelope"></i> gerencia@calltelework.com
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>Síguenos</h4>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; text-align: center;">
+                © Copyright 2025 TELEWORK. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
