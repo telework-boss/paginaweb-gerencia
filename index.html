@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 <!--
-    
+
 TemplateMo 562 Space Dynamic
 
 https://templatemo.com/tm-562-space-dynamic
@@ -66,7 +66,7 @@ https://templatemo.com/tm-562-space-dynamic
                 <div class="main-red-button"><a href="#contact">Contáctenos</a></div>
             </li>
         </ul>
-      
+
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
@@ -87,7 +87,219 @@ https://templatemo.com/tm-562-space-dynamic
   }
 }
 
+/* ===== CARRUSEL DE CLIENTES ===== */
+.clients-carousel {
+  padding: 60px 0;
+  background: #fff;
+}
 
+.clients-carousel .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.clients-carousel .section-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.clients-carousel .section-heading h2 em {
+  color: #f05f3b;
+  font-style: normal;
+}
+
+.client-item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.client-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.client-item img {
+  max-height: 100px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.client-item:hover img {
+  filter: grayscale(0%);
+}
+
+/* Estilos para los dots del carrusel */
+.clients-carousel .owl-dots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.clients-carousel .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.clients-carousel .owl-dots .owl-dot.active {
+  background: #f05f3b;
+  width: 30px;
+  border-radius: 6px;
+}
+
+/* Flechas de navegación */
+.clients-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.clients-carousel .owl-nav .owl-prev,
+.clients-carousel .owl-nav .owl-next {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: #f05f3b !important;
+  color: #fff !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  pointer-events: all;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(240, 95, 59, 0.3);
+}
+
+.clients-carousel .owl-nav .owl-prev:hover,
+.clients-carousel .owl-nav .owl-next:hover {
+  background: #d94e2b !important;
+  transform: scale(1.1);
+}
+
+.clients-carousel .owl-nav .owl-prev {
+  left: -25px;
+}
+
+.clients-carousel .owl-nav .owl-next {
+  right: -25px;
+}
+
+@media (max-width: 767px) {
+  .clients-carousel .owl-nav .owl-prev {
+    left: 5px;
+  }
+  .clients-carousel .owl-nav .owl-next {
+    right: 5px;
+  }
+  .client-item {
+    margin: 10px;
+    height: 150px;
+  }
+}
+
+/* ===== MEJORAS MISIÓN Y VISIÓN ===== */
+.mission-vision-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border-left: 5px solid #f05f3b;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(240,95,59,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.mission-vision-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mission-vision-card h4::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #f05f3b;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mission-vision-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+/* ===== TECNOLOGÍAS - SOLO 4 ===== */
+.tech-card {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.tech-card:hover {
+  border-color: #f05f3b;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(240, 95, 59, 0.12);
+}
+
+.tech-card img {
+  height: 120px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tech-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin: 0;
+}
 </style>
 
 <body>
@@ -137,7 +349,7 @@ https://templatemo.com/tm-562-space-dynamic
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
                   <div class="icon">
-                   
+
                   </div>
                   <div class="right-text">
                     <h4>Chat Bot</h4>
@@ -148,7 +360,7 @@ https://templatemo.com/tm-562-space-dynamic
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
                   <div class="icon">
-                 
+
                   </div>
                   <div class="right-text">
                     <h4>Gestion de Cobranzas</h4>
@@ -159,7 +371,7 @@ https://templatemo.com/tm-562-space-dynamic
               <div class="col-lg-6">
                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
                   <div class="icon">
-                   
+
                   </div>
                   <div class="right-text">
                     <h4>Cliente Fantasma</h4>
@@ -167,7 +379,7 @@ https://templatemo.com/tm-562-space-dynamic
                   </div>
                 </div>
               </div>
-             
+
             </div>
           </div>
         </div>
@@ -180,7 +392,7 @@ https://templatemo.com/tm-562-space-dynamic
     </div>
 
   </div>
-      
+
   </div>
 
  <div id="services" class="our-services section">
@@ -202,7 +414,7 @@ https://templatemo.com/tm-562-space-dynamic
           <p>Nuestro principal diferenciador es nuestro talento humano. Invertimos en la formación continua de nuestro equipo para garantizar un servicio eficiente, actualizado y alineado con las últimas tendencias del sector. Cada miembro de nuestro equipo está preparado para combinar la precisión de la tecnología con la calidez del contacto humano.</p>
           <p>Guiados por altos estándares de calidad e innovación constante, construimos relaciones sólidas y duraderas con nuestros aliados estratégicos. Nos convertimos en el socio de confianza que impulsa el crecimiento sostenible de tu negocio, generando valor en cada interacción y acompañándote en tu transformación digital.</p>
         </div>
-        
+
         <h2 class="mt-5">Fases de Tu Proyecto con Nosotros</h2>
         <div class="project-phases mt-4">
           <div class="phase-item mb-3">
@@ -219,7 +431,7 @@ https://templatemo.com/tm-562-space-dynamic
               </div>
             </div>
           </div>
-          
+
           <div class="phase-item mb-3">
             <div class="d-flex align-items-start">
               <div class="check-icon me-3">
@@ -234,7 +446,7 @@ https://templatemo.com/tm-562-space-dynamic
               </div>
             </div>
           </div>
-          
+
           <div class="phase-item mb-3">
             <div class="d-flex align-items-start">
               <div class="check-icon me-3">
@@ -249,7 +461,7 @@ https://templatemo.com/tm-562-space-dynamic
               </div>
             </div>
           </div>
-          
+
           <div class="phase-item">
             <div class="d-flex align-items-start">
               <div class="check-icon me-3">
@@ -296,55 +508,37 @@ https://templatemo.com/tm-562-space-dynamic
 </style>
 
 
-  <div id="portfolio" class="our-portfolio section">
+  <!-- ===== CARRUSEL DE CLIENTES ===== -->
+  &nbsp; 
+  &nbsp;
+  <div id="portfolio" class="clients-carousel section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h2>Conoce Nuestros clientes</h2>
+          <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2>Conoce Nuestros <em>Clientes</em></h2>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-             
-              <div class="showed-content">
-                <img src="assets/images/pronaca.png" alt="">
-              </div>
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-clients">
+            <div class="client-item">
+              <img src="assets/images/pronaca.png" alt="Pronaca">
             </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-           
-              <div class="showed-content">
-                <img src="assets/images/Telconet-2.jpg" alt="">
-              </div>
+            <div class="client-item">
+              <img src="assets/images/Telconet-2.jpg" alt="Telconet">
             </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-            
-              <div class="showed-content">
-                <img src="assets/images/lafabril.png" alt="">
-              </div>
+            <div class="client-item">
+              <img src="assets/images/rlbgrup.png" alt="RLB Grup">
             </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-          
-              <div class="showed-content">
-                <img src="assets/images/austro.png" alt="">
-              </div>
+            <div class="client-item">
+              <img src="assets/images/lafabril.png" alt="La Fabril">
             </div>
-          </a>
+            <div class="client-item">
+              <img src="assets/images/austro.png" alt="Austro">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -363,122 +557,57 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
       <div class="row">
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-    
-<div class="container">
-  <div class="row">
-    
-    
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/csharp.png" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-    
 
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/java.png" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/python.png" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-    <!-- Card 1 -->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/ai.avif" class="card-img-top p-4" alt="MySQL">
-      </div>
-    </div>
-
-
-
-    <!-- Card 3 -->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/cloud.jpeg" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-     <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/type.webp" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-     <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/php.svg" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-    
-     
-
-
-       
-
-      <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/databases.jpg" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card h-100 logo-card">
-        <img src="assets/images/html.png" class="card-img-top p-4" alt="Service 3">
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
-<style>
-.logo-card {
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.logo-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  border-color: #007bff;
-}
-
-.logo-card img {
-  object-fit: contain;
-  height: 150px;
-  width: 100%;
-}
-</style>
-           
-       
+          <div class="container">
+            <div class="row">
+              <!-- Solo 4 tecnologías -->
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="tech-card">
+                  <img src="assets/images/ai.avif" alt="Inteligencia Artificial">
+                  <h5>Inteligencia Artificial</h5>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="tech-card">
+                  <img src="assets/images/cloud.jpeg" alt="Cloud Computing">
+                  <h5>Cloud Computing</h5>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="tech-card">
+                  <img src="assets/images/databases.jpg" alt="Bases de Datos">
+                  <h5>Bases de Datos</h5>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="tech-card">
+                  <img src="assets/images/python.png" alt="Python">
+                  <h5>Python</h5>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4">
+                <div class="tech-card">
+                  <img src="assets/images/java.png" alt="Python">
+                  <h5>Python</h5>
+                </div>
+            </div>
+          </div>
         </div>
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
           <div class="right-list">
-            <ul>
+            <ul style="list-style: none; padding: 0;">
               <li>
-                <div class="left-content align-self-center">
-                  <a href="#"><h4>Misión</h4></a>
-                  <p>Ser el aliado estratégico de nuestros clientes, brindando soluciones BPO y tecnológicas de excelencia que optimizan la experiencia del usuario y generan valor real. A través de la innovación constante, la integración de tecnología avanzada y el desarrollo de nuestro talento humano, transformamos cada punto de contacto en una oportunidad para fortalecer relaciones, mejorar procesos y contribuir al crecimiento sostenible de las organizaciones que confían en nosotros</p>
+                <div class="mission-vision-card">
+                  <h4>Misión</h4>
+                  <p>Ser el aliado estratégico de nuestros clientes, brindando soluciones BPO y tecnológicas de excelencia que optimizan la experiencia del usuario y generan valor real. A través de la innovación constante, la integración de tecnología avanzada y el desarrollo de nuestro talento humano, transformamos cada punto de contacto en una oportunidad para fortalecer relaciones, mejorar procesos y contribuir al crecimiento sostenible de las organizaciones que confían en nosotros.</p>
                 </div>
-               
               </li>
               <li>
-                &nbsp;
-                <div class="left-content align-self-center">
-                  <a href="#"><h4>Visión</h4></a>
-                  <p>Consolidarnos como la empresa líder en soluciones BPO y desarrollo tecnológico en la región, reconocida por nuestra excelencia operativa, innovación disruptiva y compromiso inquebrantable con la satisfacción del cliente. Aspiramos a ser referentes en la transformación digital de la atención al cliente, estableciendo nuevos estándares de calidad en el sector y expandiendo nuestro alcance internacional, mientras mantenemos nuestros valores de mejora continua, formación de talento y construcción de relaciones duraderas</p>
+                <div class="mission-vision-card">
+                  <h4>Visión</h4>
+                  <p>Consolidarnos como la empresa líder en soluciones BPO y desarrollo tecnológico en la región, reconocida por nuestra excelencia operativa, innovación disruptiva y compromiso inquebrantable con la satisfacción del cliente. Aspiramos a ser referentes en la transformación digital de la atención al cliente, estableciendo nuevos estándares de calidad en el sector y expandiendo nuestro alcance internacional, mientras mantenemos nuestros valores de mejora continua, formación de talento y construcción de relaciones duraderas.</p>
                 </div>
-              
               </li>
-           
             </ul>
           </div>
         </div>
@@ -582,8 +711,8 @@ https://templatemo.com/tm-562-space-dynamic
           <div class="col-lg-3 col-md-6">
             <h4>Teléfonos</h4>
             <p>
-              <i class="fa fa-phone"></i> 099 549 3863<br />
-              <i class="fa fa-phone"></i> 096 186 7000<br />
+              <i class="fa fa-phone"></i> 0995493863<br />
+              <i class="fa fa-phone"></i> 0982266666<br />
               Lun - Vie: 8:00 AM - 6:00 PM
             </p>
           </div>
@@ -603,7 +732,7 @@ https://templatemo.com/tm-562-space-dynamic
             </ul>
           </div>
         </div>
-        
+
         <!-- Copyright -->
         <p style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px;">
           © Copyright 2025 TELEWORK. Todos los derechos reservados.
@@ -619,6 +748,35 @@ https://templatemo.com/tm-562-space-dynamic
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/templatemo-custom.js"></script>
+
+  <!-- Inicialización del carrusel de clientes -->
+  <script>
+    $(document).ready(function(){
+      $(".owl-clients").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive:{
+          0:{
+            items: 1
+          },
+          576:{
+            items: 2
+          },
+          768:{
+            items: 3
+          },
+          992:{
+            items: 4
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
