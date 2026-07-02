@@ -1,400 +1,958 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="TELEWORK - Productos y Servicios. Soluciones integrales de contact center, desarrollo de software, chatbots y más.">
+    <meta name="author" content="TELEWORK">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <title>TELEWORK - Productos y Servicios</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .logo-item {
+            margin-left: -50px;
         }
-        
-        body {
+
+        @media (max-width: 768px) {
+            .logo-item {
+                margin-left: 0px !important;
+            }
+        }
+
+        /* ===== HERO PRODUCTOS ===== */
+        .tw-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 24px 100px;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .tw-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(240, 95, 59, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(240, 95, 59, 0.08) 0%, transparent 50%);
+        }
+
+        .tw-hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        }
+
+        .tw-hero-particles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .tw-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.25);
+            border-radius: 50%;
+            animation: tw-float 6s ease-in-out infinite;
+        }
+
+        @keyframes tw-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tw-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .tw-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: #f05f3b;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .tw-hero h1 {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
             color: #fff;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+            animation: fadeInUp 0.8s ease 0.2s both;
         }
-        
-        /* Header Styles - matching index.html exactly */
-        .header-area {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+
+        .tw-hero h1 .highlight {
+            background: linear-gradient(135deg, #f05f3b 0%, #ff8a6c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tw-hero p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .tw-hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .tw-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .tw-btn-primary {
+            background: linear-gradient(135deg, #f05f3b 0%, #d94e2b 100%);
+            color: #fff;
+            box-shadow: 0 10px 40px -10px rgba(240, 95, 59, 0.4);
+        }
+
+        .tw-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -10px rgba(240, 95, 59, 0.5);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .tw-btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.2);
             backdrop-filter: blur(10px);
         }
-        
-        .header-area.header-sticky {
-            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.1);
-        }
-        
-        .main-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo-item {
-            list-style: none;
-            margin-left: -100px;
-            padding: 0;
-            margin-top: -5px;
-        }
-        
-        .logo img {
-            width: 200px;
-        }
-        
-        .nav {
-            display: flex;
-            list-style: none;
-            gap: 0;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav li {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        
-        .nav a {
-            color: #2a2a2a;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .nav a:hover,
-        .nav a.active {
-            color: #f05f3b;
-        }
-        
-        .main-red-button {
-            padding-left: 20px;
-        }
-        
-        .main-red-button a {
-            background: linear-gradient(105deg, #f05f3b 0%, #ff3d3d 100%);
-            padding: 12px 30px;
-            border-radius: 23px;
+
+        .tw-btn-outline:hover {
+            border-color: #f05f3b;
+            background: rgba(240, 95, 59, 0.1);
+            transform: translateY(-3px);
             color: #fff;
             text-decoration: none;
-            transition: all 0.3s;
-            display: inline-block;
-            font-weight: 500;
-            font-size: 14px;
         }
-        
-        .main-red-button a:hover {
-            opacity: 0.9;
+
+        .tw-hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            animation: fadeInUp 0.8s ease 0.8s both;
         }
-        
-        .menu-trigger {
-            display: none;
-            color: #2a2a2a;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            padding: 150px 0 80px;
+
+        .tw-stat-item {
             text-align: center;
         }
-        
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+        .tw-stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
         }
-        
-        .hero-section p {
-            font-size: 1.3rem;
-            max-width: 800px;
+
+        .tw-stat-number span {
+            color: #f05f3b;
+        }
+
+        .tw-stat-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .tw-scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: tw-bounce 2s infinite;
+        }
+
+        .tw-scroll-indicator i {
+            color: #94a3b8;
+            font-size: 1.5rem;
+        }
+
+        @keyframes tw-bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* ===== SECTION HEADER ===== */
+        .tw-section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .tw-section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(240, 95, 59, 0.1);
+            color: #f05f3b;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .tw-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .tw-section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* ===== SERVICES ===== */
+        .tw-services {
+            padding: 100px 24px;
+            background: #f8fafc;
+            position: relative;
+        }
+
+        .tw-services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+        }
+
+        .tw-services-grid {
+            max-width: 1280px;
             margin: 0 auto;
-            opacity: 0.9;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
         }
-        
-        /* Services Section */
-        .services-section {
+
+        .tw-service-card {
             background: #fff;
-            padding: 80px 0;
-            color: #333;
-        }
-        
-        .service-card {
-            background: #fff;
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
         }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+        .tw-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f05f3b, #3b82f6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #f05f3b 0%, #ff6b4a 100%);
-            border-radius: 20px;
+
+        .tw-service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border-color: transparent;
+        }
+
+        .tw-service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tw-service-icon-wrap {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            font-size: 2rem;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
             color: #fff;
-            box-shadow: 0 5px 15px rgba(240, 95, 59, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-        
-        .service-card h3 {
-            color: #f05f3b;
-            font-size: 1.8rem;
+
+        .tw-service-icon-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #f05f3b 0%, #d94e2b 100%);
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .tw-service-icon-wrap i {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tw-service-card:nth-child(2) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+        .tw-service-card:nth-child(3) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .tw-service-card:nth-child(4) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+        .tw-service-card:nth-child(5) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .tw-service-card:nth-child(6) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+        .tw-service-card:nth-child(7) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); }
+        .tw-service-card:nth-child(8) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+        .tw-service-card:nth-child(9) .tw-service-icon-wrap::after { background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); }
+
+        .tw-service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            color: #1e293b;
+            margin-bottom: 12px;
         }
-        
-        .service-card p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
+
+        .tw-service-card > p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
         }
-        
-        .features-list {
+
+        .tw-service-features {
             list-style: none;
+            margin-bottom: 24px;
             padding: 0;
         }
-        
-        .features-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: #555;
-        }
-        
-        .features-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #4CAF50;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .benefits-box {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: #fff;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
-        }
-        
-        .benefits-box h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-        }
-        
-        .benefits-box ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .benefits-box ul li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .benefits-box ul li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #f05f3b 0%, #e94e32 100%);
-            padding: 80px 0;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            background: #fff;
-            color: #f05f3b;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-            color: #f05f3b;
-        }
-        
-        /* Footer */
-        footer {
-            background: #2a2a2a;
-            padding: 50px 0 30px;
-            color: #fff;
-        }
-        
-        footer h4 {
-            color: #f05f3b;
-            margin-bottom: 20px;
-        }
-        
-        footer p {
-            color: #ccc;
-            line-height: 1.8;
-        }
-        
-        .social-icons {
-            list-style: none;
-            padding: 0;
+
+        .tw-service-features li {
             display: flex;
-            gap: 15px;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 8px 0;
+            color: #475569;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
-        
-        .social-icons a {
-            color: #fff;
+
+        .tw-service-features li i {
+            color: #f05f3b;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .tw-service-card:nth-child(2) .tw-service-features li i { color: #3b82f6; }
+        .tw-service-card:nth-child(3) .tw-service-features li i { color: #10b981; }
+        .tw-service-card:nth-child(4) .tw-service-features li i { color: #8b5cf6; }
+        .tw-service-card:nth-child(5) .tw-service-features li i { color: #f59e0b; }
+        .tw-service-card:nth-child(6) .tw-service-features li i { color: #ec4899; }
+        .tw-service-card:nth-child(7) .tw-service-features li i { color: #06b6d4; }
+        .tw-service-card:nth-child(8) .tw-service-features li i { color: #ef4444; }
+        .tw-service-card:nth-child(9) .tw-service-features li i { color: #14b8a6; }
+
+        .tw-service-benefits {
+            background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        .tw-service-benefits h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tw-service-benefits h4 i {
+            color: #f05f3b;
+        }
+
+        .tw-service-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tw-service-benefits li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            color: #475569;
+            font-size: 0.88rem;
+        }
+
+        .tw-service-benefits li::before {
+            content: '→';
+            color: #f05f3b;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* ===== WHY US ===== */
+        .tw-why-us {
+            padding: 100px 24px;
+            background: #fff;
+            position: relative;
+        }
+
+        .tw-why-us-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .tw-why-us-visual {
+            position: relative;
+        }
+
+        .tw-why-us-visual .tw-main-image {
+            width: 100%;
+            border-radius: 32px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tw-floating-card {
+            position: absolute;
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            z-index: 3;
+            animation: tw-float 5s ease-in-out infinite;
+        }
+
+        .tw-floating-card.tw-card-1 {
+            top: -20px;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .tw-floating-card.tw-card-2 {
+            bottom: 40px;
+            left: -30px;
+            animation-delay: 1s;
+        }
+
+        .tw-card-icon {
             width: 40px;
             height: 40px;
-            background: #f05f3b;
-            border-radius: 50%;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
         }
-        
-        .social-icons a:hover {
-            transform: scale(1.1);
+
+        .tw-floating-card.tw-card-1 .tw-card-icon { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+        .tw-floating-card.tw-card-2 .tw-card-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+
+        .tw-card-value {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e293b;
         }
-        
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2rem;
+
+        .tw-card-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .tw-why-us-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .tw-why-us-content > p {
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .tw-why-us-items {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .tw-why-us-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .tw-why-us-item:hover {
+            background: #fff;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transform: translateX(8px);
+            border-color: #f05f3b;
+        }
+
+        .tw-why-us-item-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f05f3b 0%, #d94e2b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .tw-why-us-item h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+
+        .tw-why-us-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== PROCESS ===== */
+        .tw-process {
+            padding: 100px 24px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tw-process::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+
+        .tw-process .tw-section-tag {
+            background: rgba(255,255,255,0.1);
+            color: #ff8a6c;
+        }
+
+        .tw-process .tw-section-title {
+            color: #fff;
+        }
+
+        .tw-process .tw-section-subtitle {
+            color: #94a3b8;
+        }
+
+        .tw-process-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+
+        .tw-process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 12%;
+            right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, #f05f3b, #3b82f6, #f05f3b);
+            opacity: 0.3;
+        }
+
+        .tw-process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tw-process-step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f05f3b 0%, #d94e2b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 0 30px rgba(240, 95, 59, 0.3);
+            position: relative;
+        }
+
+        .tw-process-step:nth-child(2) .tw-process-step-number { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); }
+        .tw-process-step:nth-child(3) .tw-process-step-number { background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 0 30px rgba(16, 185, 129, 0.3); }
+        .tw-process-step:nth-child(4) .tw-process-step-number { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); box-shadow: 0 0 30px rgba(139, 92, 246, 0.3); }
+
+        .tw-process-step h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .tw-process-step p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== CTA ===== */
+        .tw-cta {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, #f05f3b 0%, #d94e2b 50%, #c2410c 100%);
+            background-size: 200% 200%;
+            animation: tw-gradientShift 8s ease infinite;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tw-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        @keyframes tw-gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .tw-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .tw-cta h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .tw-cta p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .tw-cta .tw-btn {
+            background: #fff;
+            color: #f05f3b;
+            font-size: 1.1rem;
+            padding: 16px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .tw-cta .tw-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            color: #f05f3b;
+            text-decoration: none;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .tw-animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .tw-animate-on-scroll.tw-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tw-delay-1 { transition-delay: 0.1s; }
+        .tw-delay-2 { transition-delay: 0.2s; }
+        .tw-delay-3 { transition-delay: 0.3s; }
+        .tw-delay-4 { transition-delay: 0.4s; }
+        .tw-delay-5 { transition-delay: 0.5s; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .tw-why-us-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
             }
-            
-            .hero-section p {
-                font-size: 1rem;
+            .tw-why-us-visual {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto;
             }
-            
-            .nav {
+            .tw-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tw-process-grid::before {
                 display: none;
             }
-            
-            .menu-trigger {
-                display: block;
-                cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .tw-hero-stats {
+                flex-direction: column;
+                gap: 30px;
             }
-            
-            .logo-item {
-                margin-left: 0 !important;
+            .tw-services-grid {
+                grid-template-columns: 1fr;
+            }
+            .tw-process-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .tw-why-us-visual .tw-floating-card {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tw-hero h1 {
+                font-size: 2rem;
+            }
+            .tw-hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .tw-hero-buttons .tw-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .tw-service-card {
+                padding: 28px;
             }
         }
     </style>
+<base target="_blank">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <li class="logo-item" style="margin-left: -100px; padding:0; margin-top: -5px;">
-                                <img src="assets/images/logo_tele.png" style="width: 200px;" alt="">
-                            </li>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.html#top">Inicio</a></li>
-                            <li class="scroll-to-section"><a href="index.html#about" class="active">Productos y Servicios</a></li>
-                            <li class="scroll-to-section"><a href="index.html#services">Acerca de Nuestra Empresa</a></li>
-                            <li class="scroll-to-section">
-                                <div class="main-red-button"><a href="index.html#contact">Contáctenos</a></div>
-                            </li>
-                        </ul>
-                        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>Nuestros Productos y Servicios</h1>
-            <p>Soluciones integrales para transformar la experiencia de tus clientes y potenciar tu negocio</p>
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+                <li class="logo-item" style="padding:0; margin-top: -5px;">
+                    <img src="assets/images/logo_tele.png" style="width: 180px;" alt="TELEWORK">
+                </li>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+           <ul class="nav">
+            <li class="scroll-to-section"><a href="index.html#top">Inicio</a></li>
+            <li class="scroll-to-section"><a href="index.html#about" class="active">Productos y Servicios</a></li>
+            <li class="scroll-to-section"><a href="index.html#services">Acerca de Nuestra Empresa</a></li>
+            <li class="scroll-to-section">
+                <div class="main-red-button"><a href="index.html#contact">Contáctenos</a></div>
+            </li>
+        </ul>
+
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+    <!-- ===== HERO ===== -->
+    <section class="tw-hero" id="top">
+        <div class="tw-hero-bg"></div>
+        <div class="tw-hero-grid"></div>
+        <div class="tw-hero-particles" id="twParticles"></div>
+
+        <div class="tw-hero-content">
+            <div class="tw-hero-badge">
+                <i class="fa fa-star"></i>
+                Soluciones de clase mundial
+            </div>
+            <h1>
+                Transformamos tu negocio con <span class="highlight">tecnología e innovación</span>
+            </h1>
+            <p>
+                Soluciones integrales diseñadas para potenciar la experiencia de tus clientes, 
+                optimizar procesos y acelerar el crecimiento de tu empresa.
+            </p>
+            <div class="tw-hero-buttons">
+                <a href="#services" class="tw-btn tw-btn-primary">
+                    <i class="fa fa-rocket"></i>
+                    Explorar Servicios
+                </a>
+                <a href="index.html#contact" class="tw-btn tw-btn-outline">
+                    <i class="fa fa-phone"></i>
+                    Solicitar Cotización
+                </a>
+            </div>
+
+          
+        </div>
+
+        <div class="tw-scroll-indicator">
+            <i class="fa fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
+    <!-- ===== SERVICES ===== -->
+    <section class="tw-services" id="services">
+        <div class="tw-section-header tw-animate-on-scroll">
+            <div class="tw-section-tag">
+                <i class="fa fa-cubes"></i>
+                Nuestros Servicios
+            </div>
+            <h2 class="tw-section-title">Soluciones diseñadas para tu éxito</h2>
+            <p class="tw-section-subtitle">
+                Cada servicio está pensado para resolver necesidades reales de tu negocio, 
+                combinando tecnología de punta con experiencia humana.
+            </p>
+        </div>
+
+        <div class="tw-services-grid">
             <!-- Desarrollo de Software -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-code"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-1">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-code"></i>
                 </div>
                 <h3>Desarrollo de Software</h3>
-                <p>En TELEWORK no solo escribimos código, creamos soluciones que transforman negocios. Desarrollamos software a medida que se adapta perfectamente a las necesidades específicas de tu empresa, utilizando las tecnologías más avanzadas y las mejores prácticas de la industria.</p>
-                
-                <ul class="features-list">
-                    <li>Aplicaciones web personalizadas y escalables</li>
-                    <li>Sistemas de gestión empresarial (ERP/CRM)</li>
-                    <li>Aplicaciones móviles nativas y multiplataforma</li>
-                    <li>Integración de APIs y servicios de terceros</li>
-                    <li>Migración y modernización de sistemas legacy</li>
-                    <li>Arquitecturas cloud y microservicios</li>
+                <p>Creamos soluciones tecnológicas a medida que se adaptan perfectamente a las necesidades específicas de tu empresa, utilizando las tecnologías más avanzadas.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Aplicaciones web personalizadas y escalables</li>
+                    <li><i class="fa fa-check-circle"></i> Sistemas de gestión empresarial (ERP/CRM)</li>
+                    <li><i class="fa fa-check-circle"></i> Aplicaciones móviles nativas y multiplataforma</li>
+                    <li><i class="fa fa-check-circle"></i> Integración de APIs y servicios de terceros</li>
+                    <li><i class="fa fa-check-circle"></i> Migración y modernización de sistemas legacy</li>
+                    <li><i class="fa fa-check-circle"></i> Arquitecturas cloud y microservicios</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Soluciones 100% personalizadas a tus necesidades</li>
                         <li>Tecnología de punta con múltiples lenguajes y frameworks</li>
@@ -405,24 +963,22 @@
             </div>
 
             <!-- Chat Bot -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-robot"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-2">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-android"></i>
                 </div>
                 <h3>Chat Bot Inteligente</h3>
-                <p>Automatiza la atención al cliente con conversaciones inteligentes impulsadas por IA. Nuestros chatbots están diseñados para entender, aprender y responder de manera natural, brindando soporte 24/7 y mejorando la experiencia del usuario.</p>
-                
-                <ul class="features-list">
-                    <li>Atención automatizada 24/7 sin interrupciones</li>
-                    <li>Procesamiento de lenguaje natural (NLP) avanzado</li>
-                    <li>Integración con WhatsApp, Facebook, Web y más</li>
-                    <li>Respuestas personalizadas basadas en contexto</li>
-                    <li>Análisis de sentimientos y emociones del cliente</li>
-                    <li>Escalamiento automático a agentes humanos cuando sea necesario</li>
+                <p>Automatiza la atención al cliente con conversaciones inteligentes impulsadas por IA, brindando soporte 24/7 y mejorando la experiencia del usuario.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Atención automatizada 24/7 sin interrupciones</li>
+                    <li><i class="fa fa-check-circle"></i> Procesamiento de lenguaje natural (NLP) avanzado</li>
+                    <li><i class="fa fa-check-circle"></i> Integración con WhatsApp, Facebook, Web y más</li>
+                    <li><i class="fa fa-check-circle"></i> Respuestas personalizadas basadas en contexto</li>
+                    <li><i class="fa fa-check-circle"></i> Análisis de sentimientos y emociones del cliente</li>
+                    <li><i class="fa fa-check-circle"></i> Escalamiento automático a agentes humanos</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Reducción de hasta 70% en costos de atención al cliente</li>
                         <li>Respuesta instantánea a consultas frecuentes</li>
@@ -433,24 +989,22 @@
             </div>
 
             <!-- Gestión de Cobranzas -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-hand-holding-usd"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-3">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-money"></i>
                 </div>
                 <h3>Gestión de Cobranzas</h3>
-                <p>Optimizamos la recuperación de cartera mediante procesos eficientes, personal altamente capacitado y tecnología especializada. Mejoramos tu flujo de caja mientras mantenemos excelentes relaciones con tus clientes.</p>
-                
-                <ul class="features-list">
-                    <li>Estrategias de cobranza preventiva y correctiva</li>
-                    <li>Personal especializado y certificado en negociación</li>
-                    <li>Sistemas automatizados de seguimiento y recordatorios</li>
-                    <li>Reportes detallados y métricas en tiempo real</li>
-                    <li>Gestión multicanal: llamadas, SMS, WhatsApp, email</li>
-                    <li>Cumplimiento estricto de normativas y regulaciones</li>
+                <p>Optimizamos la recuperación de cartera mediante procesos eficientes, personal altamente capacitado y tecnología especializada.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Estrategias de cobranza preventiva y correctiva</li>
+                    <li><i class="fa fa-check-circle"></i> Personal especializado y certificado en negociación</li>
+                    <li><i class="fa fa-check-circle"></i> Sistemas automatizados de seguimiento</li>
+                    <li><i class="fa fa-check-circle"></i> Reportes detallados y métricas en tiempo real</li>
+                    <li><i class="fa fa-check-circle"></i> Gestión multicanal: llamadas, SMS, WhatsApp, email</li>
+                    <li><i class="fa fa-check-circle"></i> Cumplimiento estricto de normativas</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Incremento significativo en la tasa de recuperación</li>
                         <li>Reducción de cartera vencida</li>
@@ -461,24 +1015,22 @@
             </div>
 
             <!-- Cliente Fantasma -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-user-secret"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-1">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-user-secret"></i>
                 </div>
                 <h3>Cliente Fantasma</h3>
-                <p>Nuestro servicio de Cliente Fantasma es una herramienta estratégica de investigación que te permite evaluar objetivamente la calidad de atención, procesos operativos y cumplimiento de estándares en tu organización.</p>
-                
-                <ul class="features-list">
-                    <li>Evaluaciones presenciales, telefónicas y digitales</li>
-                    <li>Auditorías de experiencia del cliente completas</li>
-                    <li>Evaluadores profesionales capacitados por industria</li>
-                    <li>Informes detallados con análisis cuantitativo y cualitativo</li>
-                    <li>Grabaciones de audio/video cuando sea aplicable</li>
-                    <li>Recomendaciones accionables para mejora continua</li>
+                <p>Herramienta estratégica de investigación que evalúa objetivamente la calidad de atención, procesos operativos y cumplimiento de estándares.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Evaluaciones presenciales, telefónicas y digitales</li>
+                    <li><i class="fa fa-check-circle"></i> Auditorías de experiencia del cliente completas</li>
+                    <li><i class="fa fa-check-circle"></i> Evaluadores profesionales capacitados por industria</li>
+                    <li><i class="fa fa-check-circle"></i> Informes detallados con análisis cuantitativo</li>
+                    <li><i class="fa fa-check-circle"></i> Grabaciones de audio/video cuando sea aplicable</li>
+                    <li><i class="fa fa-check-circle"></i> Recomendaciones accionables para mejora continua</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Identificación de áreas de mejora en tiempo real</li>
                         <li>Evaluación objetiva del cumplimiento de protocolos</li>
@@ -489,24 +1041,22 @@
             </div>
 
             <!-- Contact Center -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-headset"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-2">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-headphones"></i>
                 </div>
                 <h3>Contact Center Omnicanal</h3>
-                <p>Brindamos soluciones completas de contact center con atención omnicanal, combinando tecnología avanzada con agentes altamente capacitados para ofrecer experiencias excepcionales a tus clientes.</p>
-                
-                <ul class="features-list">
-                    <li>Atención multicanal: voz, chat, email, redes sociales</li>
-                    <li>Gestión de llamadas entrantes y salientes</li>
-                    <li>IVR inteligente y enrutamiento avanzado</li>
-                    <li>Grabación y monitoreo de calidad</li>
-                    <li>CRM integrado para gestión de clientes</li>
-                    <li>Reportería en tiempo real y analytics avanzado</li>
+                <p>Soluciones completas de contact center con atención omnicanal, combinando tecnología avanzada con agentes altamente capacitados.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Atención multicanal: voz, chat, email, redes sociales</li>
+                    <li><i class="fa fa-check-circle"></i> Gestión de llamadas entrantes y salientes</li>
+                    <li><i class="fa fa-check-circle"></i> IVR inteligente y enrutamiento avanzado</li>
+                    <li><i class="fa fa-check-circle"></i> Grabación y monitoreo de calidad</li>
+                    <li><i class="fa fa-check-circle"></i> CRM integrado para gestión de clientes</li>
+                    <li><i class="fa fa-check-circle"></i> Reportería en tiempo real y analytics avanzado</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Mejora en la satisfacción del cliente (CSAT)</li>
                         <li>Reducción en tiempos de espera y atención</li>
@@ -517,24 +1067,22 @@
             </div>
 
             <!-- Televenta -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-phone-volume"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-3">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-phone-square"></i>
                 </div>
                 <h3>Televenta y Telemercadeo</h3>
-                <p>Impulsamos tus ventas con estrategias efectivas de televenta y telemercadeo. Nuestro equipo especializado se convierte en una extensión de tu fuerza de ventas, generando oportunidades y cerrando negocios.</p>
-                
-                <ul class="features-list">
-                    <li>Generación y calificación de leads</li>
-                    <li>Ventas telefónicas y cierre de negocios</li>
-                    <li>Up-selling y cross-selling</li>
-                    <li>Agendamiento de citas comerciales</li>
-                    <li>Encuestas de satisfacción y estudios de mercado</li>
-                    <li>Reactivación de clientes inactivos</li>
+                <p>Impulsamos tus ventas con estrategias efectivas. Nuestro equipo se convierte en una extensión de tu fuerza de ventas.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Generación y calificación de leads</li>
+                    <li><i class="fa fa-check-circle"></i> Ventas telefónicas y cierre de negocios</li>
+                    <li><i class="fa fa-check-circle"></i> Up-selling y cross-selling</li>
+                    <li><i class="fa fa-check-circle"></i> Agendamiento de citas comerciales</li>
+                    <li><i class="fa fa-check-circle"></i> Encuestas de satisfacción y estudios de mercado</li>
+                    <li><i class="fa fa-check-circle"></i> Reactivación de clientes inactivos</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Incremento en ventas y conversiones</li>
                         <li>Optimización del embudo de ventas</li>
@@ -545,24 +1093,22 @@
             </div>
 
             <!-- Help Desk -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-life-ring"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-1">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-life-ring"></i>
                 </div>
                 <h3>Help Desk y Soporte Técnico</h3>
-                <p>Ofrecemos servicios de help desk profesional para resolver incidencias técnicas de manera rápida y efectiva, garantizando la continuidad operativa de tu negocio.</p>
-                
-                <ul class="features-list">
-                    <li>Soporte técnico multicanal 24/7</li>
-                    <li>Sistema de tickets y gestión de incidencias</li>
-                    <li>Niveles de escalamiento definidos</li>
-                    <li>Base de conocimiento y FAQs</li>
-                    <li>Soporte remoto y asistencia en sitio</li>
-                    <li>SLAs personalizados según criticidad</li>
+                <p>Servicios de help desk profesional para resolver incidencias técnicas de manera rápida y efectiva, garantizando la continuidad operativa.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Soporte técnico multicanal 24/7</li>
+                    <li><i class="fa fa-check-circle"></i> Sistema de tickets y gestión de incidencias</li>
+                    <li><i class="fa fa-check-circle"></i> Niveles de escalamiento definidos</li>
+                    <li><i class="fa fa-check-circle"></i> Base de conocimiento y FAQs</li>
+                    <li><i class="fa fa-check-circle"></i> Soporte remoto y asistencia en sitio</li>
+                    <li><i class="fa fa-check-circle"></i> SLAs personalizados según criticidad</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Resolución rápida de incidencias técnicas</li>
                         <li>Reducción de downtime operativo</li>
@@ -573,24 +1119,22 @@
             </div>
 
             <!-- Fidelización -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-heart"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-2">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-heart"></i>
                 </div>
                 <h3>Fidelización de Clientes</h3>
-                <p>Diseñamos e implementamos estrategias integrales de fidelización que convierten clientes ocasionales en embajadores de tu marca, incrementando el valor de vida del cliente.</p>
-                
-                <ul class="features-list">
-                    <li>Programas de lealtad personalizados</li>
-                    <li>Campañas de retención proactivas</li>
-                    <li>Segmentación avanzada de clientes</li>
-                    <li>Comunicaciones personalizadas multicanal</li>
-                    <li>Análisis de churn y prevención de fugas</li>
-                    <li>Medición de NPS y satisfacción continua</li>
+                <p>Estrategias integrales que convierten clientes ocasionales en embajadores de tu marca, incrementando el valor de vida del cliente.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> Programas de lealtad personalizados</li>
+                    <li><i class="fa fa-check-circle"></i> Campañas de retención proactivas</li>
+                    <li><i class="fa fa-check-circle"></i> Segmentación avanzada de clientes</li>
+                    <li><i class="fa fa-check-circle"></i> Comunicaciones personalizadas multicanal</li>
+                    <li><i class="fa fa-check-circle"></i> Análisis de churn y prevención de fugas</li>
+                    <li><i class="fa fa-check-circle"></i> Medición de NPS y satisfacción continua</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Aumento en retención de clientes</li>
                         <li>Incremento en lifetime value (LTV)</li>
@@ -601,24 +1145,22 @@
             </div>
 
             <!-- Envíos Masivos -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-paper-plane"></i>
+            <div class="tw-service-card tw-animate-on-scroll tw-delay-3">
+                <div class="tw-service-icon-wrap">
+                    <i class="fa fa-paper-plane"></i>
                 </div>
                 <h3>Envíos Masivos</h3>
-                <p>Implementamos campañas de comunicación masiva efectivas a través de múltiples canales, llegando a tu audiencia en el momento preciso con el mensaje correcto.</p>
-                
-                <ul class="features-list">
-                    <li>SMS masivos con alta tasa de entrega</li>
-                    <li>Email marketing con diseños profesionales</li>
-                    <li>Mensajes masivos por WhatsApp Business</li>
-                    <li>Notificaciones push móviles</li>
-                    <li>Segmentación y personalización avanzada</li>
-                    <li>Reportes de entrega, apertura y conversión</li>
+                <p>Campañas de comunicación masiva efectivas a través de múltiples canales, llegando a tu audiencia en el momento preciso.</p>
+                <ul class="tw-service-features">
+                    <li><i class="fa fa-check-circle"></i> SMS masivos con alta tasa de entrega</li>
+                    <li><i class="fa fa-check-circle"></i> Email marketing con diseños profesionales</li>
+                    <li><i class="fa fa-check-circle"></i> Mensajes masivos por WhatsApp Business</li>
+                    <li><i class="fa fa-check-circle"></i> Notificaciones push móviles</li>
+                    <li><i class="fa fa-check-circle"></i> Segmentación y personalización avanzada</li>
+                    <li><i class="fa fa-check-circle"></i> Reportes de entrega, apertura y conversión</li>
                 </ul>
-                
-                <div class="benefits-box">
-                    <h4>Beneficios Clave:</h4>
+                <div class="tw-service-benefits">
+                    <h4><i class="fa fa-bolt"></i> Beneficios Clave</h4>
                     <ul>
                         <li>Alcance masivo con inversión optimizada</li>
                         <li>Comunicación inmediata y efectiva</li>
@@ -630,55 +1172,220 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>¿Listo para transformar tu negocio?</h2>
-            <p>Contáctanos hoy y descubre cómo nuestras soluciones pueden impulsar tu empresa</p>
-            <a href="index.html#contact" class="cta-button">Solicitar Cotización</a>
+    <!-- ===== WHY US ===== -->
+    <section class="tw-why-us">
+        <div class="tw-why-us-grid">
+            <div class="tw-why-us-visual tw-animate-on-scroll">
+                <div class="tw-floating-card tw-card-1">
+                    <div class="tw-card-icon"><i class="fa fa-users"></i></div>
+                    <div class="tw-card-value">100%</div>
+                    <div class="tw-card-label">Clientes Satisfechos</div>
+                </div>
+                <div class="tw-floating-card tw-card-2">
+                    <div class="tw-card-icon"><i class="fa fa-line-chart"></i></div>
+                    <div class="tw-card-value">98%</div>
+                    <div class="tw-card-label">Tasa de Retención</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop" 
+                     alt="Equipo TELEWORK" class="tw-main-image" 
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="tw-why-us-content tw-animate-on-scroll tw-delay-2">
+                <div class="tw-section-tag" style="justify-content: flex-start; margin-bottom: 16px;">
+                    <i class="fa fa-trophy"></i>
+                    ¿Por qué elegirnos?
+                </div>
+                <h2>Tu éxito es nuestra prioridad</h2>
+                <p>En TELEWORK combinamos experiencia, tecnología y pasión por el servicio para ofrecerte resultados que superan tus expectativas.</p>
+
+                <div class="tw-why-us-items">
+                    <div class="tw-why-us-item">
+                        <div class="tw-why-us-item-icon"><i class="fa fa-trophy"></i></div>
+                        <div>
+                            <h4>Experiencia Comprobada</h4>
+                            <p>Más de 15 años en el mercado respaldan nuestra capacidad para entregar resultados excepcionales.</p>
+                        </div>
+                    </div>
+                    <div class="tw-why-us-item">
+                        <div class="tw-why-us-item-icon"><i class="fa fa-cogs"></i></div>
+                        <div>
+                            <h4>Tecnología de Vanguardia</h4>
+                            <p>Utilizamos las herramientas y plataformas más avanzadas para garantizar eficiencia y calidad.</p>
+                        </div>
+                    </div>
+                    <div class="tw-why-us-item">
+                        <div class="tw-why-us-item-icon"><i class="fa fa-users"></i></div>
+                        <div>
+                            <h4>Equipo Especializado</h4>
+                            <p>Profesionales certificados y en constante capacitación para brindarte el mejor servicio.</p>
+                        </div>
+                    </div>
+                    <div class="tw-why-us-item">
+                        <div class="tw-why-us-item-icon"><i class="fa fa-shield"></i></div>
+                        <div>
+                            <h4>Compromiso y Confianza</h4>
+                            <p>Trabajamos con transparencia total, reportes claros y resultados medibles en cada proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4>Contacto</h4>
-                    <p>
-                        <i class="fa fa-map-marker"></i> Sabanilla Oe 3-169<br />
-                        y Av. Real Audiencia<br />
-                        Quito - Ecuador
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4>Teléfonos</h4>
-                    <p>
-                        <i class="fa fa-phone"></i> 099 549 3863<br />
-                        <i class="fa fa-phone"></i> 096 186 7000<br />
-                        Lun - Vie: 8:00 AM - 6:00 PM
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4>Email</h4>
-                    <p>
-                        <i class="fa fa-envelope"></i> gerencia@telework.solutions
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h4>Síguenos</h4>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                    </ul>
-                </div>
+    <!-- ===== PROCESS ===== -->
+    <section class="tw-process">
+        <div class="tw-section-header tw-animate-on-scroll">
+            <div class="tw-section-tag">
+                <i class="fa fa-road"></i>
+                Nuestro Proceso
             </div>
-            <p style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; text-align: center;">
-                © Copyright 2025 TELEWORK. Todos los derechos reservados.
+            <h2 class="tw-section-title">Así trabajamos contigo</h2>
+            <p class="tw-section-subtitle">
+                Un proceso estructurado y transparente para garantizar el éxito de cada proyecto.
             </p>
         </div>
-    </footer>
+
+        <div class="tw-process-grid">
+            <div class="tw-process-step tw-animate-on-scroll tw-delay-1">
+                <div class="tw-process-step-number">1</div>
+                <h4>Diagnóstico</h4>
+                <p>Analizamos tus necesidades y objetivos para diseñar la mejor estrategia personalizada.</p>
+            </div>
+            <div class="tw-process-step tw-animate-on-scroll tw-delay-2">
+                <div class="tw-process-step-number">2</div>
+                <h4>Propuesta</h4>
+                <p>Presentamos un plan detallado con alcance, tiempos y recursos necesarios.</p>
+            </div>
+            <div class="tw-process-step tw-animate-on-scroll tw-delay-3">
+                <div class="tw-process-step-number">3</div>
+                <h4>Ejecución</h4>
+                <p>Implementamos la solución con seguimiento constante y ajustes en tiempo real.</p>
+            </div>
+            <div class="tw-process-step tw-animate-on-scroll tw-delay-4">
+                <div class="tw-process-step-number">4</div>
+                <h4>Resultados</h4>
+                <p>Entregamos métricas claras y trabajamos en la mejora continua de los procesos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="tw-cta">
+        <div class="tw-cta-content">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Contáctanos hoy y descubre cómo nuestras soluciones pueden impulsar el crecimiento de tu empresa.</p>
+            <a href="index.html#contact" class="tw-btn">
+                <i class="fa fa-paper-plane"></i>
+                Solicitar Cotización Ahora
+            </a>
+        </div>
+    </section>
+   &nbsp;
+   &nbsp;
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <div class="row" style="margin-bottom: 30px;">
+            <div class="col-lg-3 col-md-6">
+              <h4>Contacto</h4>
+              <p>
+                <i class="fa fa-map-marker"></i> Sabanilla Oe 3-169<br />
+                y Av. Real Audiencia<br />
+                Quito - Ecuador
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4>Teléfonos</h4>
+              <p>
+                <i class="fa fa-phone"></i> 0995493863<br />
+                <i class="fa fa-phone"></i> 0982266666<br />
+                <i class="fa fa-phone"></i> 0996024282<br />
+                Lun - Vie: 8:00 AM - 6:00 PM
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4>Email</h4>
+              <p>
+                <i class="fa fa-envelope"></i> gerencia@calltelework.com
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h4>Síguenos</h4>
+              <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 15px;">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <p style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px;">
+            © Copyright 2025 TELEWORK. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/templatemo-custom.js"></script>
+
+  <script>
+    // Generate particles
+    const particlesContainer = document.getElementById('twParticles');
+    for (let i = 0; i < 30; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'tw-particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 6 + 's';
+      particle.style.animationDuration = (4 + Math.random() * 4) + 's';
+      particle.style.opacity = Math.random() * 0.5 + 0.1;
+      particle.style.width = (2 + Math.random() * 4) + 'px';
+      particle.style.height = particle.style.width;
+      particlesContainer.appendChild(particle);
+    }
+
+    // Scroll animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('tw-visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.tw-animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
