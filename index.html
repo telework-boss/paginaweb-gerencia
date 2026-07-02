@@ -28,6 +28,7 @@ https://templatemo.com/tm-562-space-dynamic
 
 -->
   </head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <body>
 
@@ -793,4 +794,47 @@ https://templatemo.com/tm-562-space-dynamic
   </script>
 
 </body>
+
+
+<script>
+  // Inicializa EmailJS con tu Public Key
+  emailjs.init("Sc6Q__Xj0M1RwD1Vg");
+
+  document.getElementById("contact").addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita que la página se recargue
+
+    // Recoge los valores del formulario
+    const params = {
+      name: document.getElementById("name").value,
+      surname: document.getElementById("surname").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      company: document.getElementById("company").value,
+      service: document.getElementById("service").value,
+      message: document.getElementById("message").value,
+      time: new Date().toLocaleString('es-ES', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
+    };
+
+    // Envía el email
+    emailjs.send("service_b2t0crd", "template_6rl9ewc", params)
+      .then(function(response) {
+        // Éxito
+        alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.");
+        document.getElementById("contact").reset();
+      }, function(error) {
+        // Error
+        alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contáctanos por teléfono.");
+        console.error("EmailJS error:", error);
+      });
+  });
+</script>
+
+
 </html>
