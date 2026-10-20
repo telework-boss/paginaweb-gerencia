@@ -173,7 +173,7 @@ body {
 }
 
 .page-section {
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 .section-heading h2 {
@@ -944,7 +944,7 @@ About Us Style
 */
 
 #about {
-  margin-top: 120px;
+  margin-top: 30px;
 }
 
 .about-us {
@@ -992,7 +992,7 @@ Services Style
 
 .our-services {
   margin-top: 0px;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 .our-services .left-image {
@@ -1004,8 +1004,8 @@ Services Style
 }
 
 .our-services .section-heading p {
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .our-services .progress-skill-bar {
@@ -1171,7 +1171,7 @@ Blog
 .our-blog {
   position: relative;
   margin-top: 80px;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 .our-blog .section-heading h2 {

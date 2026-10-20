@@ -21,6 +21,42 @@
     <link rel="stylesheet" href="assets/css/owl.css">
 
     <style>
+
+.header-area {
+    height: 72px; /* Puedes ajustar este valor (ej. 60px o 70px) según qué tan delgado lo quieras */
+    min-height: 72px;
+}
+  
+/* ===== NAVBAR FIJO Y SÓLIDO (NUNCA TRANSPARENTE) ===== */
+.header-area.header-sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff !important; /* Fondo blanco sólido por defecto */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1) !important; /* Sombra fija */
+    transition: all 0.3s ease;
+}
+
+/* Estado al hacer scroll (mantiene el mismo fondo sólido) */
+.header-area.header-sticky.background-header,
+.header-area.background-header {
+    background-color: #ffffff !important;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1) !important;
+    position: fixed !important;
+}
+
+/* Color de los textos del menú para que contrasten perfectamente con el fondo blanco */
+.header-area .main-nav .nav li a {
+    color: #2a2a2a !important;
+}
+
+/* Color para el enlace activo o hover si lo deseas */
+.header-area .main-nav .nav li a:hover,
+.header-area .main-nav .nav li a.active {
+    color: #f05f3b !important;
+}
         .logo-item {
             margin-left: -50px;
         }

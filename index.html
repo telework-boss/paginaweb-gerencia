@@ -495,6 +495,40 @@ https://templatemo.com/tm-562-space-dynamic
 </div>
 
 <style>
+
+.header-area {
+    height: 70px; /* Puedes ajustar este valor (ej. 60px o 70px) según qué tan delgado lo quieras */
+    min-height: 70px;
+}
+
+/* ===== NAVBAR FIJO Y CONSISTENTE ===== */
+.header-area.header-sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estado cuando se hace scroll (fondo blanco y sombra) */
+.header-area.header-sticky.background-header,
+.header-area.background-header {
+    background-color: #ffffff !important;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1) !important;
+    position: fixed !important;
+}
+
+/* En productos.html, como el banner principal es oscuro, los textos se ven blancos al inicio y oscuros al hacer scroll */
+.tw-hero ~ header:not(.background-header) .main-nav .nav li a {
+    color: #ffffff !important;
+}
+
+.tw-hero ~ header.background-header .main-nav .nav li a {
+    color: #2a2a2a !important;
+}
+
 .phase-item {
   transition: transform 0.3s ease;
 }
@@ -519,17 +553,14 @@ https://templatemo.com/tm-562-space-dynamic
 }
 </style>
 
-
-  <!-- ===== CARRUSEL DE CLIENTES ===== -->
-   
-
-
   <div id="blog" class="our-blog section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
           <div class="section-heading">
             <h2>Tecnologías Utilizadas</h2>
+            &ensp;
+            &ensp;
           </div>
         </div>
         <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
